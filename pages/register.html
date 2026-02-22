@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form id="registerForm">
+        <h2>Create Account</h2>
+
+        <!-- Name -->
+         <label for="">Full Name</label>
+         <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Your Name">
+
+        <!-- Email -->
+        <label for="">Email</label>
+        <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+
+        <!-- Password -->
+        <label for="Password">Password</label>
+        <input type="password" id="password" name="password" required
+        placeholder="At least 8 characters, number uppercase, lowercase, special char" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}">
+
+        <!-- Birthdate -->
+         <label for="">Birthdate</label>
+         <input type="date" id="birthdate" name="birthdate" required min="1900-01-01" max="2026-12-31">
+
+         <button type="submit">Register</button>
+    </form>
+
+    <div id="message" style="color:red; margin-top:10px;"></div>
+
+    <script src="../js/register.js"></script>
+</body>
+</html>
