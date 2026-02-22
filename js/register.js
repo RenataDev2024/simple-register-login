@@ -18,7 +18,7 @@ function validatePassword(password){
 }
 
 function validateBirthdate(birthdate){
-    // Must not include '-00' (invalid month/day)
+    // Basic check to prevent invalid zero month/day
     return birthdate && !birthdate.includes('-00');
 }
 
@@ -98,7 +98,7 @@ form.addEventListener('submit',function(event){
         }
    
     
-    console.log("Registered user:", users);
+    console.log("Registered user:", newUser);
 
     messageDiv.style.color = 'green';
     messageDiv.textContent = "User registered successfully!"
