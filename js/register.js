@@ -83,10 +83,10 @@ form.addEventListener('submit',function(event){
     }
 
     // --- Create user object ---
-    const users ={name,email,password,birthdate};
+    const newUser ={name,email,password,birthdate};
 
     // --- Save to localStorage ---
-    const result = saveUser(users);
+    const result = saveUser(newUser);
 
     if(!result.success){
         if(result.error === "email"){
